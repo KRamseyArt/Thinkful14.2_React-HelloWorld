@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.navBar{
+    padding: 0;
+    display: flex;
+    background: slateblue;
+    padding: 10px;
+    justify-content: space-between;
+}
+.navBar li{
+    flex: 1;
+    list-style-type: none;
+}
+.navBar li a{
+    font-size: smaller;
+    color: white;
+    text-decoration: none;
+}
+.navBar li a:hover{
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: white;
+    color: cornflowerblue;
+}
+img{
+    border: 5px solid slateblue;
+    border-radius: 100%;
+    margin: 10px auto;
+}
+
+h1 {
+    font-family: 'Poiret One', cursive;
+    padding: 5px 10px;
+    color: white;
+    background: slateblue;
+}
+#contact {
+    background: blanchedalmond;
+    padding: 5px 10px;
+}
+#contact li{
+    list-style-type: none;
+}
+#info {
+    padding: 0;
+}
+#info a{
+    color: cornflowerblue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+section h2 {
+    font-family: 'Poiret One', cursive;
+    letter-spacing: 2px;
+    padding: 5px 10px;
+    background: slateblue;
+    color: white;
+}
+section h3{
+    color: cornflowerblue;
+}
+section p{
+    padding: 5px 10px;
+}
+section span{
+    color: gray;
+}
+.job:nth-child(even), .job p:nth-child(even) {
+    background: blanchedalmond;
+}
+
+@media only screen and (min-width: 720px){
+    .navBar{
+        width: 70%;
+    }
+    body{
+        background: cornflowerblue;
+    }
+    #content{
+        background: white;
+        width: 70%;
+        height: 100vh;
+    }
+    section p {
+        padding: 5px 30px;
+    }
+}

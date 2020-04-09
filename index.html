@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>React | Hello World</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri|Poiret+One&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div id="application-root"></div>
+
+		<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+		<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script type="text/babel">
+        
+            const userName = "Sally Sue";
+            const email="SoSueMe@SallySue.com";
+            const phone="123-456-7890"
+
+			function App(props) {
+                console.log(props);
+				return (
+                    <main>
+                        <ul className='navBar'>
+                            <li><a href='/'>Home</a></li>
+                            <li><a href='#education'>Education</a></li>
+                            <li><a href='#employment'>Employment</a></li>
+                            <li><a href='#contact'>Contact</a></li>
+                        </ul>
+                        
+                        <div id='content'>
+                            <img src='images\MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg'/>
+                            <div>
+                                <header>
+                                    <h1>{props.name}'s Resume</h1>
+                                    <address id='contact'>    
+                                        <h2>Contact</h2>
+                                        <ul id='info'>
+                                            <li>{props.phone}</li>
+                                            <li><a href='mailto:{props.email}?Subject=About%20Your%20Resume...'>{props.email}</a></li>
+                                        </ul>
+                                    </address>
+                                </header>
+
+                                <section id='education'>
+                                    <h2>Education</h2>
+                                    <h3>Savannah College of Art and Design</h3>
+                                    <p>Class Valedictorian, learned to work within teams of creatives to reach deadlines. Founder of extracurricular club, great practice with managing and motivating a team of creatives to complete various art projects for fundraising and other events to promote our school.</p>
+                                </section>
+
+                                <section id='employment'>
+                                    <h2>Employment History</h2>
+                
+                                    <div className='job'>
+                                        <h3>UI/UX Designer at Graphics Galore, LLC.</h3>
+                                        <span>February 2018 - Present</span>
+                                        <p>Assisted in the design and development of dozens of apps and video games deployed on the App Store, Google Play, and Steam</p>
+                                    </div>
+                                    
+                                    <div className='job'>
+                                        <h3>Freelance Illustrator</h3>
+                                        <span>May 2013 - March 2019</span>
+                                        <p>Provided high quality illustrations for hundreds of clients with projects ranging from children's books to collectible trading cards.</p>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        
+                    </main>
+                );
+			}
+
+			ReactDOM.render(
+                <App
+                    name={userName}
+                    email={email}
+                    phone={phone}
+                />,
+                document.querySelector("#application-root"));
+		</script>
+	</body>
+</html>
